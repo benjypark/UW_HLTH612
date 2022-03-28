@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='CDA.xsl'?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc">
+    <templateId root="2.16.840.1.113883.10.20.22.4.1"/>
+    <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
+    	<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests and/or laboratory data"/>
+	<title>ECG AI Results</title>
+	<text>
+		<table border="1">
+			<tbody>
+				<tr>
+					<th colspan="4">ECG AI Results</th>
+				</tr>
+				<tr>
+					<th colspan="4">Processed AI on 03-26-2022 12:00AM</th>
+				</tr>
+				<tr ID="Result1">
+					<td ID="Result1OriginalText" >
+						ARVC: 95.01%
+					</td>
+                </tr>
+			</tbody>
+		</table>
+	</text>
+    <id root="e1aa44dd-6f39-4f5c-b267-897c3821b563"/>
+    <code code="71020" displayName="ECG AI" codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT"/>
+    <statusCode code="completed"/>
+    <component>
+        <observation classCode="OBS" moodCode="EVN">
+            <templateId root="2.16.840.1.113883.10.20.22.4.2"/>
+            <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
+            <id root="e1aa44dd-6f39-2f5c-b267-897c3824b563"/>
+            <code code="36643-5" displayName="ECG AI Processing" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC">					
+            </code>
+            <text>
+                <reference value="#Result1"/>
+            </text>
+            <statusCode code="completed"/>				
+                <recordTarget>
+                    <patientRole>
+                        <id extension="111-00-2330" root="2.16.840.1.113883.4.1"/>
+                        <telecom value="tel:(123)456-7890" use="HP"/>
+                        <patient>
+                            <name use="L">
+                                <given>John</given>
+                                <family>Doe</family>
+                            </name>
+                            <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1" displayName="Male"/>                                    
+                        </patient>
+                    </patientRole>
+                </recordTarget>
+            <author>
+                <time value="20220225103206-0500"/>
+                <assignedAuthor>
+                    <id extension="1234" root="2.16.840.1.113883.4.6"/>
+                    <code code="111NR0200X" codeSystem="2.16.840.1.113883.6.101" codeSystemName="NUCC" displayName="Cardiology"/>
+                    <addr>
+                        <streetAddressLine>1234 StreetName St.</streetAddressLine>
+                        <city>Waterloo</city>
+                        <province>ON</province>
+                        <country>Canada</country>
+                    </addr>							
+                </assignedAuthor>
+            </author>
+        </observation>
+		<nonXMLBody>			
+			<text mediaType="image/png" representation="B64">TE9DQUwgVElUTEU6IFNVUkdJQ0FMIENPTlNVTFQgICAgICAgICAgICAgICAgICAgICAgICAgCgpESUNUIERBVEU6IEFQUiAyMCwgMjAyMEAxNzowMyAgICAgRU5UUlkgREFURTogQVBSIDIwLCAyMDIwQDE3OjA0OjE2ICAgICAgCkRJQ1RBVEVEIEJZOiBCQUxJTU9PRCwgTU9TVEFGQSAgICBBVFRFTkRJTkc6IEFHVVJULCBUSE9NQVMgSk9TRVBIClVSR0VOQ1k6IHJvdXRpbmUgICAgICAgICAgICAgICAgICBTVEFUVVM6IFNJR05FRCBOT1QgWUVUIENPU0lHTkVEICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICoqKiBOT1QgWUVUIENPU0lHTkVEICoqKiAgICAgICAgICAgICAgICAgICAgICAgICAgIAoKUGF0aWVudApDQzogQ2hyb25pYyBjZXJ2aWNhbCBwYWluLCBzdGFibGUgc3ltcHRvbWF0b2xvZ3kuCgpEWDogQ2VydmljYWwgZGlzYyBkZWdlbmVyYXRpb24sIHVuc3BlY2lmaWVkIGNlcnZpY2FsIHJlZ2lvbiBvZiBjZXJ2aWNhbCBzcGluZSAoTTUwLjMwKSwgbm8gZm9jYWwgbmV1cm9kZWZpY2l0LgoKUExBTjogRi91IHJvdXRpbmUsIHB0IGlzIG5vdCBpbnRlcmVzdGVkIGluIGludmFzaXZlIHByb2NlZHVyZSBvciBzdXJnaWNhbCBpbnRlcnZlbnRpb24gYXQgdGhpcyB0aW1lLgogCkVsZWN0cm9uaWNhbGx5IHNpZ25lZCBieSBNb3N0YWZhIEJBTElNT09EIDA0LzIwLzIwMjAgMTc6MDc=
+			</text>		
+		</nonXMLBody>
+	</component>
+</ClinicalDocument>

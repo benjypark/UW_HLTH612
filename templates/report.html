@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>{% block title %} Reports for 
+    {{ patientId }}
+    {% endblock %}
+</h2>
+
+{% for report in reports %}
+<span class="badge badge-primary">Report generated at {{ report['created'] }}</span>
+<br>
+<table class="table table-striped">
+    <tr>
+      <th scope="col">AI Class</th>
+      <th scope="col">Prediction score</th>
+    </tr>
+    <tr>
+      <td>ARVC</td>
+      <td>{{ report['content'] }}</td>
+    </tr>
+    <tr>
+      <td>Other</td>
+      <td>N/A</td>
+    </tr>
+</table>
+<p><img src="{{ imageFilePath }}/{{ report['resultImage'] }}"></p>
+{% endfor %}
+
+{% endblock %}

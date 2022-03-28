@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{% block title %} {% endblock %}</h1>
+
+{% for report in reports %}
+<a href="#">
+    <h2>{{ report['patientId'] }}</h2>
+</a>
+<span class="badge badge-primary">{{ report['created'] }}</span>
+<hr>
+{% endfor %}
+
+{% endblock %}
